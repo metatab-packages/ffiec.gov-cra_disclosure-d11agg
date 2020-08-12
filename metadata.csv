@@ -1,0 +1,30 @@
+Declare,metatab-latest
+Title,"Small business loan originations, by county and year"
+Description,"Multi-year CRA disclosures for small business originations, aggregated to county and year"
+Identifier,ba1a8d79-8bd9-4c81-99e1-a474ac361d67
+Name,ffiec.gov-cra_disclosure-d11agg-1.1.1
+Dataset,cra_disclosure
+Origin,ffiec.gov
+Variant,d11agg
+Version,1.1.1
+Version.Major,1
+Version.Minor,1
+Version.Patch,1
+Created,2020-08-11T22:08:01
+Modified,2020-08-11T22:08:02
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+Homepage,https://www.ffiec.gov/cra/craproducts.htm,CRA Data Products,,
+Downloadpage,https://www.ffiec.gov/cra/craflatfiles.htm,Aggregate & Disclosure Flat Files,Links to download the files.,
+Documentation,https://www.ffiec.gov/cra/pdf/17FlatDiscSpecs.pdf,Disclosure File Specifications,File specifications for the 2017 Disclosure Flat File,
+
+Section,References,Name,Description,
+Reference,metapack+http://library.metatab.org/ffiec.gov-cra_disclosure-d11.csv,cra_d11,"Source data, CRA small business originations"
+
+Section,Resources,Name,Description,
+Datafile,notebooks/Build.ipynb,smb_orig_county,Small business loan originations by county
+Section,Schema,DataType,AltName,Description
