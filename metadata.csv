@@ -1,30 +1,48 @@
 Declare,metatab-latest
-Title,"Small business loan originations, by county and year"
-Description,"Multi-year CRA disclosures for small business originations, aggregated to county and year"
+Title,"Small business loan originations, by county and year, 2010 to 2020"
+Description,"Multi-year CRA disclosures for small business originations, aggregated to county"
+Description,and year
 Identifier,ba1a8d79-8bd9-4c81-99e1-a474ac361d67
-Name,ffiec.gov-cra_disclosure-d11agg-1.1.1
+Name,ffiec.gov-cra_disclosure-county-d11-1.3.1
 Dataset,cra_disclosure
 Origin,ffiec.gov
-Variant,d11agg
-Version,1.1.1
+Grain,county
+Variant,d11
+Version,1.3.1
 Version.Major,1
-Version.Minor,1
+Version.Minor,3
 Version.Patch,1
 Created,2020-08-11T22:08:01
-Modified,2020-08-11T22:08:02
-
+Modified,2022-01-12T21:03:24
+Giturl,https://github.com/metatab-packages/ffiec.gov-cra_disclosure-d11agg.git
+""
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-
+""
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
 Homepage,https://www.ffiec.gov/cra/craproducts.htm,CRA Data Products,,
 Downloadpage,https://www.ffiec.gov/cra/craflatfiles.htm,Aggregate & Disclosure Flat Files,Links to download the files.,
 Documentation,https://www.ffiec.gov/cra/pdf/17FlatDiscSpecs.pdf,Disclosure File Specifications,File specifications for the 2017 Disclosure Flat File,
-
+""
 Section,References,Name,Description,
-Reference,metapack+http://library.metatab.org/ffiec.gov-cra_disclosure-d11.csv,cra_d11,"Source data, CRA small business originations"
-
+Reference,index:ffiec.gov-cra_disclosure-d11-2.2.1,cra_d11,"Source data, CRA small business originations",
+""
 Section,Resources,Name,Description,
-Datafile,notebooks/Build.ipynb,smb_orig_county,Small business loan originations by county
-Section,Schema,DataType,AltName,Description
+Datafile,notebooks/Build.ipynb#counties,smb_orig_county,Small business loan originations by county,
+""
+Section,Schema,DataType,AltName,Description,Has_Codes
+Table,smb_orig_county,,,,
+Table.Column,year,integer,,,
+Table.Column,geoid,string,,,
+Table.Column,respondents,integer,,,
+Table.Column,num_orig_bus_lt100k,integer,,,
+Table.Column,tot_orig_bus_lt100k,integer,,,
+Table.Column,num_orig_bus_lt250k,integer,,,
+Table.Column,tot_orig_bus_gt100k_lt250k,integer,,,
+Table.Column,num_orig_bus_gt250k_lt1m,integer,,,
+Table.Column,tot_orig_bus_gt250k_lt1m,integer,,,
+Table.Column,num_orig_bus_lt1m,integer,,,
+Table.Column,tot_orig_bus_lt1m,integer,,,
+Table.Column,num_orig_bus_al,integer,,,
+Table.Column,tot_orig_bus_al,integer,,,
